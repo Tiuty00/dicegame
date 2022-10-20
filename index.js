@@ -25,6 +25,16 @@ button.addEventListener("click", images);
       } else if (dice1.src == dice2.src) {
             title.innerHTML = "Draw!";
       }
+    
+      if (document.querySelector(".scorep2").innerHTML >= 20) {
+            document.querySelector(".score2").style.fontWeight= "700";
+            title.innerHTML = "Player 2 Wins the game! 🥳";
+            button.disabled = true;
+      } else if (document.querySelector(".scorep1").innerHTML >= 20) {
+            document.querySelector(".score1").style.fontWeight= "700";
+            title.innerHTML = "Player 1 Wins the game! 🥳";
+            button.disabled = true;
+      }
 }
 
 
